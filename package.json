@@ -1,0 +1,18 @@
+{
+  "name": "provably-fair-verifier",
+  "version": "1.0.0",
+  "description": "Check DiceCity game results yourself, offline: seed-pair games, Crash and Slide hash chains, and the Blackjack shuffle.",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "dicecity-verify": "bin/verify.mjs"
+  },
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Account, deposit, withdrawal or bet question
+    url: https://dicecity.com
+    about: Please contact support on dicecity.com. Account questions are not handled in this repository.
+  - name: Security problem
+    url: https://github.com/DiceCity-tech/provably-fair-verifier/blob/main/SECURITY.md
+    about: Please report it privately as SECURITY.md describes, not as an issue.

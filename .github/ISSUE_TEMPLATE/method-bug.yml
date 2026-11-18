@@ -1,0 +1,56 @@
+name: Method bug
+description: The verifier gives a different answer than the documented method, or the method text is wrong.
+labels: ["method bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This tracker is for bugs in the verifier and its method only.
+
+        - Questions about your account, a deposit, a withdrawal or a bet go to support at dicecity.com. They are not answered here.
+        - Security problems: do not open an issue. Follow SECURITY.md.
+        - Never post the seeds of a seed pair you are still playing with. Only post a server seed after it has been revealed (rotated out).
+  - type: dropdown
+    id: method
+    attributes:
+      label: Method
+      options:
+        - Seed pair (Dice, Mines, Plinko and the other seed games)
+        - Hash chain (Crash, Slide)
+        - Blackjack shuffle
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      placeholder: dice
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: What you ran
+      description: The exact command, or the inputs. Use revealed seeds only.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and why
+      description: For example the result the game showed, or the line of the README the answer goes against.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What the verifier printed
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Verifier version and Node version
+      placeholder: 1.0.0, Node 22
